@@ -1,0 +1,36 @@
+<!doctype html><!-- swapImages.html   Blake Rodriguez -->
+<!-- Web page that rotates through images at the click of a button. -->
+<!-- ================= -->
+<html>
+ <head>
+   <title>Image Swapper</title>
+ </head>
+ <body>
+  <div style="text-align:center">
+  <h2>Image Swapper</h2>
+  <p>
+   <img id="oneImg" src="die1.gif">
+   <img id="threeImg" src="die3.gif">
+   <img id="fiveImg" src="die5.gif">
+ </p>
+  <input type="button" value="Rotate Left"    
+	onclick="
+		saved=document.getElementById('oneImg').src;
+		document.getElementById('oneImg').src=
+		document.getElementById('threeImg').src;
+		document.getElementById('threeImg').src=
+		document.getElementById('fiveImg').src;
+		document.getElementById('fiveImg').src=saved;
+		">
+<input type="button" value="Rotate Right"    
+	onclick="
+		saved=document.getElementById('fiveImg').src;
+		document.getElementById('fiveImg').src=
+		document.getElementById('threeImg').src;
+		document.getElementById('threeImg').src=
+		document.getElementById('oneImg').src;
+		document.getElementById('oneImg').src=saved;
+		">
+ </div>
+</body>
+</html>

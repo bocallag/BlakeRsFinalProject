@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- lucky2.html                                  Blake Rodriguez -->
+<!-- Web page that generates a 4 number lottery number. -->
+<!-- ===================================================  -->
+
+<html>
+ <head>
+   <title> Pick-4 Using Script </title>
+   <script type="text/javascript">
+     function GenerateNumber()
+     // Assumes: minBox and maxBox define the range for the value
+     // Results: picks four random numbers and displays it in outputDiv
+     { 
+       minVal=0;
+       maxVal=parseFloat(document.getElementById('maxBox').value);
+       number1=Math.floor(Math.random()*(maxVal-minVal+1)) + minVal;
+       number2=Math.floor(Math.random()*(maxVal-minVal+1)) + minVal;
+       number3=Math.floor(Math.random()*(maxVal-minVal+1)) + minVal;
+       number4=Math.floor(Math.random()*(maxVal-minVal+1)) + minVal;
+	document.getElementById('outputDiv').innerHTML=
+         'The PICK-4 lottery winner is ' + number1 + '-' + number2 + '-' + number3 + '-' + number4
+     }
+   </script>
+ </head>
+
+ <body>
+   <h2>Lucky Number</h2>
+   <p>
+     Enter the maximum ball number (the lowest ball number is always 0): <input type="text" id="maxBox" size=3 value=999>.
+   </p>
+   <input type="button" value="Generate Lucky Number" onclick="GenerateNumber();">  
+   <hr>
+   <div id="outputDiv"></div>
+ </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- help.html                                            Blake Rodriguez -->
+<!-- Web page that displays a story. -->
+<!-- using innerHTLML attribute. -->
+<!-- =============================================================== -->
+
+<html>
+ <head>
+   <title> Story Generator </title>
+ </head>
+ </body>
+<h2> Story Generator by Blake Rodriguez </h2>
+ <p>
+	Enter adjective for temperature:
+	 <input type="text" id="temperatureBox" size=20 value="warm"> <br>
+	Enter animal:
+	 <input type="text" id="animalBox" size=20 value="dog"> <br>
+	Enter activity: <input type="text" id="activityBox" size=20 value="swim"> <br>
+	Enter second animal: <input type="text" id="animal2Box" size=20 value="bear"> <br>
+	Enter date: <input type="text" id="dateBox" size=20 value="March 28th"> <br>
+	Enter adjective for life: <input type="text" id="lifeBox" size=20 value="happily ever after"> <br>
+ </p>
+	<input type="button" value="Click for Story"
+		onclick="document.getElementById('outputDiv').innerHTML=
+		 '<p>One day on a ' + document.getElementById('temperatureBox').value +
+		 'day, there was a cute little <I>' +
+		 document.getElementById('animalBox').value +
+		 '</I>. This animal decided to go for a <I> ' +
+		 document.getElementById('activityBox').value +
+		 '</I>.<br> Then a <I>' +
+		 document.getElementById('animal2Box').value+
+		 '</I> came walking up and the <I>' +
+		 document.getElementById('animalBox').value + 
+		 '</I> and the <I>' +
+		 document.getElementById('animal2Box').value+
+		 '</I> became best friends.' +
+		 ' <br> On this date, <I>' +
+		 document.getElementById('dateBox').value+
+		 '</I>, these two creatures lived <I>' +
+		 document.getElementById('lifeBox').value+
+		 '</I>.';">
+ <hr>
+<div id="outputDiv"></div>
+ </body>
+</html>
